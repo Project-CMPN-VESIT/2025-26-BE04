@@ -1,0 +1,93 @@
+/* ===== FEATURED CAMPAIGNS SECTION ===== */
+.featured-campaigns-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Responsive padding: vertical space scales, horizontal space stays safe */
+  padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+  background-color: #ffffff; 
+}
+
+.featured-campaigns-content {
+  width: 100%;
+  max-width: 1200px; /* Standard professional container width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-campaigns-text {
+  text-align: center;
+  font-family: "Monomaniac One", sans-serif;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.featured-campaigns-text .pre-title {
+  display: block;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  text-transform: uppercase;
+  color: var(--accent-01, #0e926b); /* Using a color for professional hierarchy */
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.featured-campaigns-text .title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: var(--dark, #1a1a1a);
+  line-height: 1.6;
+  /* Removed aggressive negative margin for better mobile safety */
+  margin: 0; 
+}
+.title{
+  overflow: hidden;
+}
+
+.featured-campaigns-text .sub-title {
+  font-family: "Outfit", sans-serif; /* Cleaner font for secondary text */
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: #666;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.featured-campaigns-cards {
+  display: grid;
+  /* Uses CSS Grid for automatic layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  justify-items: center;
+  margin-top: 1rem;
+}
+
+/* 7. RESPONSIVE QUERIES */
+
+@media (max-width: 768px) {
+  .featured-campaigns-wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .featured-campaigns-text {
+    margin-bottom: 2rem;
+  }
+
+  .featured-campaigns-cards {
+    /* Slightly smaller min-width for mobile cards */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-campaigns-text .title {
+    font-size: 1.8rem;
+  }
+  
+  .featured-campaigns-text .pre-title {
+    font-size: 0.9rem;
+  }
+}

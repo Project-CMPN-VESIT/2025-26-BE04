@@ -1,0 +1,60 @@
+/* ===== TRANSPARENCY SECTION ===== */
+.transparency-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* Responsive padding: large on desktop, tight on mobile */
+  padding: clamp(3rem, 10vw, 6rem) 1.5rem;
+  font-family: "Outfit", sans-serif;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  text-align: center; /* Ensures professional alignment */
+  width: 100%;
+  max-width: 1200px; /* Centers the content on large screens */
+  margin: 0 auto;
+}
+
+.transparency-title {
+  /* Fluid font size: scales between 1.8rem and 2.5rem */
+  overflow: hidden;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  color: var(--foreground, #1a1a1a);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.6;
+}
+
+.transparency-desc {
+  /* Removed min-width: 700px which causes overflow */
+  width: 100%;
+  max-width: 800px; /* Optimal reading width for eyes */
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--foreground, #4a4a4a);
+  margin: 0 auto;
+}
+
+/* 7. RESPONSIVE QUERIES */
+
+@media (max-width: 768px) {
+  .transparency-wrapper {
+    padding: 3rem 1.2rem;
+    gap: 1.5rem;
+  }
+  
+  .transparency-title {
+    font-weight: 800; /* Bolder on mobile for better hierarchy */
+  }
+
+  .transparency-desc {
+    text-align: justify; /* Optional: looks cleaner on some mobile designs */
+    hyphens: auto;
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 480px) {
+  .transparency-title {
+    font-size: 1.6rem;
+  }
+}

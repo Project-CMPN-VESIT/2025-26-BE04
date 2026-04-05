@@ -1,0 +1,79 @@
+/* ===== HERO SECTION ===== */
+.hero-section {
+  /* Using 'cover' ensures the image always fills the space without gaps */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                    url("src/assets/Hero/Hero background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  width: 100%;
+  min-height: 80vh; /* Better than fit-content for hero impact */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Reduced gap and used clamp for spacing */
+  gap: clamp(3rem, 10vh, 8rem); 
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-typography {
+  font-family: "Orelega One", cursive;
+  /* Fluid typography: Min 2.5rem, Max 5rem */
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  max-width: 900px;
+  text-align: center;
+  color: #ffffff; /* Assuming white, replace with var(--foreground-inverted) */
+  line-height: 1.6;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  /* Text stroke can be hard to read on mobile, kept subtle */
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-info-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to stack on mobile */
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch; /* Makes all cards same height */
+  width: 100%;
+}
+
+/* 7. RESPONSIVE ADJUSTMENTS */
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 60vh;
+    background-position: center top; /* Keeps faces/tops of images visible */
+    padding: 40px 15px;
+  }
+
+  .hero-content {
+    gap: 3rem; /* Tighter gap for mobile */
+  }
+
+  .hero-typography {
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8); /* Thinner stroke on small screens */
+  }
+
+  .hero-info-cards {
+    flex-direction: column; /* Stack cards vertically on phones */
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-typography {
+    font-size: 2rem; /* Safety fallback for very small screens */
+  }
+}

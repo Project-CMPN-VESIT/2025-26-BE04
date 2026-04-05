@@ -1,0 +1,39 @@
+{
+  "name": "jeevansetu",
+  "version": "1.0.0",
+  "description": "Major year project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon -r dotenv/config --experimental-json-modules index.js"
+  },
+  "keywords": [
+    "major",
+    "year",
+    "project"
+  ],
+  "author": "Gautam Rai, Yash Ingale, Chinmay Desai, Shaanveer Singh",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.6.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.18.3",
+    "nodemailer": "^7.0.10",
+    "nodemon": "^3.1.10",
+    "pdfkit": "^0.17.2",
+    "razorpay": "^2.9.6",
+    "to-words": "^5.1.0",
+    "web3": "^4.16.0"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^7.0.11",
+    "@types/pdfkit": "^0.17.5"
+  }
+}

@@ -1,0 +1,480 @@
+/* =========================================
+   Global & Layout Setup
+========================================= */
+.ju-root {
+  font-family: inherit;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scroll globally */
+  box-sizing: border-box;
+}
+
+.ju-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.ju-section {
+  padding: 80px 0;
+}
+
+.ju-section--alt {
+  background-color: #f1f3f6; /* Soft modern gray */
+}
+
+.ju-section--navy {
+  background-color: #23408c; /* Brand blue */
+  color: #ffffff;
+}
+
+/* Typography & Utilities */
+.ju-section__title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 900;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  letter-spacing: -0.02em;
+}
+
+.ju-section__title--white {
+  color: #ffffff;
+}
+
+.ju-divider {
+  width: 80px;
+  height: 4px;
+  background: #23408c;
+  margin: 0 auto 25px;
+  border-radius: 4px;
+}
+
+.ju-divider--orange {
+  background: #ff9545;
+}
+
+.ju-section__sub {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #334155;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+/* =========================================
+   1. NEW HERO SECTION (No Scrollbars)
+========================================= */
+.ju-hero {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 100px 0;
+  width: 100%;
+}
+
+.ju-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.ju-hero__text-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.ju-tag {
+  display: inline-flex; /* Changed from inline-block */
+  align-items: center;  /* Forces vertical centering */
+  justify-content: center;
+  line-height: normal;  /* Overrides any global squished line-height */
+  background: rgba(35, 64, 140, 0.1);
+  color: #23408c;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ju-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.ju-highlight {
+  color: #23408c;
+}
+
+.ju-hero p {
+  font-size: clamp(1.1rem, 3vw, 1.25rem);
+  color: #334155;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.ju-hero__actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Hero Visual Box */
+.ju-hero__visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ju-hero__image-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(35, 64, 140, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #f1f3f6;
+  transition: transform 0.3s ease;
+}
+
+.ju-hero__image-card:hover {
+  transform: translateY(-10px);
+}
+
+.ju-hero__icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.ju-hero__card-text strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.ju-hero__card-text span {
+  color: #ff9545;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.ju-btn {
+  display: inline-flex; /* Changed from inline-block */
+  align-items: center;  /* Forces vertical centering */
+  justify-content: center;
+  line-height: normal;  /* Overrides any global squished line-height */
+  background: #ff9545;
+  color: #1a1a1a;
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #ff9545;
+  cursor: pointer;
+  text-align: center;
+}
+
+.ju-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 149, 69, 0.35);
+}
+
+.ju-btn--outline {
+  background: transparent;
+  color: #23408c;
+  border-color: #23408c;
+}
+
+.ju-btn--outline:hover {
+  background: #23408c;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(35, 64, 140, 0.2);
+}
+
+/* =========================================
+   2. How You Can Help (Cards)
+========================================= */
+.ju-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.ju-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f8fafc;
+}
+
+.ju-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.ju-card__icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.ju-card h3 {
+  font-size: 1.4rem;
+  color: #23408c;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.ju-card p {
+  color: #334155;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* =========================================
+   3. Donate Section (Blob Layout)
+========================================= */
+.ju-donate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.ju-donate__text {
+  flex: 1.2;
+}
+
+.ju-donate__text h3 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.ju-donate__text p {
+  color: #334155;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.ju-donate__blob {
+  flex: 0 0 320px;
+  height: 320px;
+  background: #f1f3f6;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 50px rgba(255, 149, 69, 0.15);
+  animation: blob-float 8s ease-in-out infinite alternate;
+}
+
+@keyframes blob-float {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translateY(0); }
+  100% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%; transform: translateY(-15px); }
+}
+
+.ju-donate__blob span { font-size: 4.5rem; margin-bottom: 10px; }
+.ju-donate__blob p { font-weight: 900; color: #23408c; font-size: 1.3rem; margin-bottom: 5px; }
+.ju-donate__blob small { color: #334155; font-size: 1rem; font-weight: 500; }
+
+/* =========================================
+   4. Volunteer & Form Section
+========================================= */
+.ju-volunteer {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.ju-volunteer__info {
+  flex: 1;
+}
+
+.ju-volunteer__info h3 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.ju-volunteer__info p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #e2e8f0; 
+}
+
+.ju-volunteer__info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ju-volunteer__info ul li {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  padding-left: 35px;
+  position: relative;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.ju-volunteer__info ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff9545;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* Form Card */
+.ju-form-card {
+  flex: 1;
+  background: #ffffff;
+  padding: 45px 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+.ju-form-card h2 {
+  font-size: 2.2rem;
+  color: #23408c;
+  margin-bottom: 30px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.ju-field {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.ju-field label {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.ju-field input,
+.ju-field select,
+.ju-field textarea {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1a1a1a;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.ju-field input:focus,
+.ju-field select:focus,
+.ju-field textarea:focus {
+  outline: none;
+  border-color: #23408c;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(35, 64, 140, 0.08);
+}
+
+.ju-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.ju-btn--submit {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* =========================================
+   5. Responsive Adjustments
+========================================= */
+@media (max-width: 992px) {
+  .ju-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .ju-hero__actions {
+    justify-content: center;
+  }
+
+  .ju-donate,
+  .ju-volunteer {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+  
+  .ju-donate__blob {
+    flex: 0 0 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .ju-volunteer__info ul li {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ju-section { padding: 60px 0; }
+  .ju-hero { padding: 80px 0; }
+  
+  .ju-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ju-donate {
+    padding: 40px 20px;
+  }
+  
+  .ju-form-card {
+    padding: 35px 25px;
+    width: 100%;
+  }
+}

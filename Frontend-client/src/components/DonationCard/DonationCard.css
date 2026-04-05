@@ -1,0 +1,262 @@
+/* ===== DONATION CARD SECTION ===== */
+.donation-card-wrapper {
+  width: 100%;
+  max-width: 380px; /* Professional standard card width */
+  min-height: 520px;
+  background-color: var(--creme, #fffdfa);
+  border-radius: 1.2rem;
+  margin: 0 auto; /* Centering for grid/flex layouts */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.donation-card-wrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.donation-card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.donation-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Changed from contain to cover for a modern 'full' look */
+  transition: transform 0.5s ease;
+}
+
+.donation-card-wrapper:hover .donation-card-image img {
+  transform: scale(1.05);
+}
+
+.donation-card-content {
+  padding: 1.5rem;
+  flex-grow: 1; /* Automatically takes up remaining space */
+  font-family: "Outfit", sans-serif;
+  color: var(--foreground, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 4px solid var(--accent-01, #0e926b);
+  border-top: none;
+  border-radius: 0 0 1.2rem 1.2rem;
+  position: relative; /* Added just in case for internal absolute positioning */
+}
+
+.donation-card-content .title {
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.donation-card-statistics {
+  padding: 1rem 0;
+}
+
+/* Added a Progress Bar Style */
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent-01, #0e926b);
+  border-radius: 10px;
+}
+
+.donation-stat-bottom {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.total-percentage {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.total-percentage span {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--accent-01, #0e926b);
+}
+
+.donation-card-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.donation-card-button.donate-now-button {
+  flex-grow: 1; /* Button takes available space */
+  border-radius: 50px;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  color: #ffffff !important;
+  background-color: var(--accent-02, #fca00c);
+  font-size: 1.2rem; /* Adjusted for better button proportions */
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid transparent !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.donation-card-button.donate-now-button:hover {
+  background-color: #ffffff;
+  color: var(--accent-02, #fca00c) !important;
+  border: 2px solid var(--accent-02, #fca00c) !important;
+}
+
+/* =========================================
+   SHARE BUTTON & DROPDOWN STYLES (NEW)
+   ========================================= */
+
+.share-wrapper {
+  position: relative; /* Crucial: anchors the absolute dropdown */
+  display: flex;
+}
+
+.share-button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-01, #008f6f); /* Matches theme */
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  flex-shrink: 0;
+}
+
+.share-button:hover {
+  background: #0b7354; /* Darker shade of accent-01 on hover */
+  transform: scale(1.05);
+}
+
+.share-dropdown {
+  position: absolute;
+  bottom: 125%; /* Pops up directly above the share button */
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  padding: 1rem 0.5rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: slideUpFade 0.2s ease-out forwards;
+}
+
+/* Little triangle pointer for the dropdown */
+.share-dropdown::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 17px; /* Aligns with the center of the share button */
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ffffff;
+}
+
+.share-dropdown-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--foreground, #1a1a1a);
+  margin-bottom: 0.5rem;
+  padding: 0 0.8rem 0.5rem 0.8rem;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.share-option {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--foreground, #1a1a1a);
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: "Outfit", sans-serif;
+  transition: background-color 0.2s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.share-option:hover {
+  background-color: #f5f5f5;
+}
+
+.share-option-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.8rem;
+}
+
+.share-option-label {
+  flex-grow: 1;
+}
+
+/* Subtle animation for the dropdown menu appearing */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE SCALING
+   ========================================= */
+@media (max-width: 400px) {
+  .donation-card-wrapper {
+    max-width: 100%;
+  }
+
+  .donation-card-button.donate-now-button {
+    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+  }
+}
+
+/* Force the specific react-icon to scale up visually */
+.share-button svg {
+  width: 28px !important;
+  height: 28px !important;
+  transform: scale(1.9); /* This scales the visual path inside the SVG */
+}

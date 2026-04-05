@@ -1,0 +1,280 @@
+
+.news-main {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  background: transparent;
+  padding: 0;
+}
+
+.news-page-wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 52px 32px 72px;
+}
+
+@media (max-width: 768px) {
+  .news-page-wrapper {
+    padding: 32px 18px 52px;
+  }
+}
+
+
+/* ============================================================
+   MAIN GRID
+   ============================================================ */
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .news-grid {
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+  }
+}
+
+.news-left,
+.news-right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ============================================================
+   SHARED CARD BASE
+   ============================================================ */
+.news-card {
+  background: var(--background);
+  border: 1.5px solid var(--grey);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+.news-card-header {
+  padding: 20px 24px 16px;
+  border-bottom: 1.5px solid var(--grey);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.news-card-header-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  border-radius: 50%;
+  background: var(--accent-02);
+}
+
+.news-card-header h3,
+.news-card-header h4 {
+  font-family: 'Monomaniac One', 'Orelega One', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark);
+  margin: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  overflow: visible;
+}
+
+.news-card-body {
+  padding: 24px;
+}
+
+/* ============================================================
+   NEWS IMAGE GRID
+   ============================================================ */
+.news-carousel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 520px) {
+  .news-carousel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.news-img-clickable {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1.5px solid var(--grey);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.news-img-clickable:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-02);
+}
+
+.news-img-caption {
+  font-family: 'Atkinson Hyperlegible', 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: var(--foreground);
+  opacity: 0.45;
+  text-align: center;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* ============================================================
+   NEWS LINKS
+   ============================================================ */
+.news-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.news-links-list li {
+  border-bottom: 1px solid var(--grey);
+  padding: 14px 0;
+}
+
+.news-links-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.news-links-list li:first-child {
+  padding-top: 0;
+}
+
+.news-link-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-decoration: none !important;
+}
+
+.news-link-arrow {
+  flex-shrink: 0;
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  background: var(--accent-02);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--foreground-inverted);
+  font-weight: 700;
+}
+
+.news-link-text {
+  font-family: 'Atkinson Hyperlegible', 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--dark) !important;
+  line-height: 1.55;
+  transition: color 0.2s;
+}
+
+.news-link-item:hover .news-link-text {
+  color: var(--accent-01) !important;
+}
+
+/* ============================================================
+   VIDEO / INTERVIEW
+   ============================================================ */
+.yt-thumbnail-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--dark);
+}
+
+.yt-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.yt-thumbnail-container:hover .yt-thumbnail {
+  opacity: 0.75;
+}
+
+.yt-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 44px;
+  background: #ff0000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.yt-thumbnail-container:hover .yt-play-btn {
+  background: #cc0000;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.yt-play-btn::after {
+  content: '';
+  border-left: 16px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  margin-left: 5px;
+}
+
+.yt-fallback-link {
+  display: block;
+  text-decoration: none !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.yt-label {
+  display: block;
+  font-family: 'Atkinson Hyperlegible', 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: var(--foreground);
+  opacity: 0.45;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* ============================================================
+   INFOGRAPHIC / KIDS IMAGES
+   ============================================================ */
+.news-kids-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.kids-img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  border: 1.5px solid var(--grey);
+  transition: box-shadow 0.3s;
+}
+
+.kids-img:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}

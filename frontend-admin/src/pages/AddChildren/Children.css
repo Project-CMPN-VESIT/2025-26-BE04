@@ -1,0 +1,228 @@
+/* ---------- ROOT ---------- */
+:root {
+  --primary: #2b3674;
+  --primary-light: #3b4aa1;
+  --bg-light: #f4f6fb;
+  --white: #ffffff;
+}
+
+/* ---------- MAIN WRAPPER ---------- */
+.children-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-light);
+}
+
+/* ---------- FORM CARD ---------- */
+.children-card {
+  width: 80%;
+  background: var(--primary);
+  color: var(--white);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.children-card h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+/* Section headings */
+.children-card h3 {
+  margin: 2rem 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-left: 4px solid #fff;
+  padding-left: 0.6rem;
+}
+
+/* ---------- FORM GRID ---------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+/* Field wrapper */
+.form-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-grid label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  opacity: 0.9;
+}
+
+/* Inputs, Selects, Textareas */
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  padding: 0.75rem 0.8rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  background: #f9f9ff;
+  color: #000;
+}
+
+/* Focus state */
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+  outline: 2px solid var(--primary-light);
+}
+
+/* Textarea */
+.form-grid textarea {
+  resize: none;
+  min-height: 100px;
+  grid-column: span 3;
+}
+
+/* ---------- BUTTONS ---------- */
+.form-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form-actions button {
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--white);
+  color: var(--primary);
+  transition: all 0.2s ease;
+}
+
+.form-actions button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Cancel Button */
+.cancel-btn {
+  background: #ffdede !important;
+  color: #b30000 !important;
+}
+
+/* ---------- TABLE ---------- */
+.children-list {
+  width: 80%;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+}
+
+.children-list h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.children-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.children-list th,
+.children-list td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7f2;
+}
+
+.children-list th {
+  background: var(--bg-light);
+  font-weight: 600;
+}
+
+.children-list button {
+  padding: 0.4rem 0.9rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid textarea {
+    grid-column: span 1;
+  }
+
+  .children-card,
+  .children-list {
+    width: 100%;
+    padding: 1.8rem;
+  }
+
+  .children-card h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ... (Keep your existing ROOT, WRAPPER, CARD styles) ... */
+
+/* ---------- HEADER WITH BACK BUTTON ---------- */
+/* Replaces the inline styles in your JSX */
+.form-header-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.children-card h2 {
+  /* Resetting margin/align because it is now inside the flex row */
+  margin-bottom: 0;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+/* ---------- BACK BUTTON ---------- */
+.back-btn {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px; /* Rounded to match your theme */
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+  transform: translateX(-3px); /* Slide left effect */
+}
+
+/* ... (Keep your existing FORM GRID, BUTTONS, ETC.) ... */

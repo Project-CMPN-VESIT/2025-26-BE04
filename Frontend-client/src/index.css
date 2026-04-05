@@ -1,0 +1,30 @@
+/* 1. Universal reset (Keep it clean) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Apply smooth scrolling and prevent horizontal scroll ONLY on the body/html */
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 3. Safe Link defaults */
+a {
+  text-decoration: none !important;
+  color: var(--foreground) !important;
+  /* Removed overflow: hidden */
+}
+
+/* 4. Button & Button-like Links */
+button,
+.buttonized-link {
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--accent-01);
+  border: 3px solid var(--foreground);
+  outline: none;
+}

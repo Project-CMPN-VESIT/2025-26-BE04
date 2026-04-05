@@ -1,0 +1,327 @@
+.donation-container {
+  padding: 1rem 0rem;
+  box-shadow: none !important;
+  width: 80%;
+}
+
+.fundraiser-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.fundraiser-info-container {
+  background-color: #2b3674ef;
+  width: 80%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 25px;
+}
+
+.fundraiser-info {
+  padding-left: 1rem;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 2rem;
+}
+
+.fundraiser-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 0.5rem;
+}
+
+.fundraiser-description,
+.fundraiser-date,
+.fundraiser-goal {
+  max-width: 700px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.fundraiser-description span,
+.fundraiser-date span {
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+.fundraiser-goal {
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.fundraiser-goal span {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: whitesmoke;
+}
+
+.fundraiser-image {
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fundraiser-image img {
+  width: 100%;
+  margin-right: 1.5rem;
+  border-radius: 25px;
+  border: 2px solid whitesmoke;
+}
+
+.donation-charts {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap; /* <-- THE FIX: Allows charts to drop to the next line */
+  gap: 1.5rem;
+  padding: 2rem 0;
+  justify-content: center; /* Centers the charts elegantly if one drops to a new line */
+  align-items: stretch;
+}
+
+.charts-donation-timeline,
+.charts-donation-progress {
+  flex: 1 1 300px; /* <-- THE FIX: Allows them to grow, shrink, and forces wrapping if they get smaller than 300px */
+  height: 400px;
+  background-color: white;
+  box-shadow: 2px 2px 4px var(--light-gray);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--primary-color-light);
+  position: relative;
+}
+
+.charts-donation-timeline > .chart-container {
+  width: 100%;
+  height: fit-content !important;
+  padding: 1rem !important;
+}
+
+.chart-container {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .donation-charts {
+    flex-direction: column;
+  }
+
+  .charts-donation-timeline,
+  .charts-donation-progress {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+.Mui-TableHeadCell-Content-Actions,
+.MuiButtonBase-root {
+  overflow: hidden;
+}
+
+.report-print {
+  padding-bottom: 2rem;
+  width: 80%;
+  text-align: right;
+  margin: auto;
+
+  .report-print-button {
+    background-color: #2b3674ef;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.15rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .report-print-button:hover {
+    background-color: #212958;
+  }
+}
+
+/* ================= AI Insights Styling (UPDATED) ================= */
+
+.fundraiser-insights {
+  width: 80%;
+  margin-top: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.insights-title {
+  margin-bottom: 15px;
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.insights-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 6px solid #2b3674;
+  border-radius: 12px;
+  padding: 2rem;
+  color: #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Headings */
+.analytics-main-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+}
+
+.analytics-section-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #2b3674;
+  display: flex;
+  align-items: center;
+}
+
+.analytics-sub-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #475569;
+}
+
+/* Paragraph */
+.analytics-paragraph {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+/* Lists */
+.analytics-list,
+.analytics-ordered-list {
+  margin-left: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.analytics-list li,
+.analytics-ordered-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Tables */
+.analytics-table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #e2e8f0;
+}
+
+.analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.analytics-table th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.analytics-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.analytics-table tr:last-child td {
+  border-bottom: none;
+}
+
+.analytics-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.analytics-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* ================= Print Styling ================= */
+@media print {
+  .fundraiser-info-container,
+  .donation-charts,
+  .donation-container,
+  .fundraiser-insights {
+    width: 95%;
+  }
+
+  .insights-card {
+    box-shadow: none;
+    border: 1px solid #cbd5e1;
+    border-left: 4px solid #2b3674;
+  }
+
+  .fundraiser-info {
+    width: 50%;
+    padding-top: 0rem;
+
+    .fundraiser-name {
+      font-size: 2rem;
+    }
+  }
+
+  .fundraiser-image {
+    width: 45%;
+  }
+
+  .donation-charts {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: fit-content;
+    padding-inline: 0rem;
+
+    .charts-donation-timeline,
+    .charts-donation-progress {
+      width: 100% !important;
+      height: fit-content;
+    }
+  }
+
+  .donation-container {
+    break-before: page;
+
+    .MuiBox-root.css-zrlv9q {
+      display: none;
+    }
+  }
+}

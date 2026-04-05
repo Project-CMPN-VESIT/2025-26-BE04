@@ -1,0 +1,172 @@
+/* ===== FOOTER SECTION ===== */
+.footer-container {
+  background-color: #f8f9fa; /* Slightly cleaner off-white */
+  color: #1a1a1a;
+  font-family: "Roboto", "Outfit", sans-serif;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Main Content Area */
+.footer-content {
+  display: grid;
+  /* Desktop: Logo | Links | Links | Address */
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Left Section (Branding) */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-logo {
+  width: clamp(100px, 10vw, 130px);
+  height: auto;
+  filter: grayscale(20%); /* Optional: makes logo look more integrated */
+}
+
+.footer-logo-text {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 0.02em;
+}
+
+.connect-text {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: -10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #eee;
+  border-radius: 50%;
+  color: #333 !important;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #0e926b;
+  color: #fff !important;
+  transform: translateY(-3px);
+}
+
+/* Center Sections (Link Columns) */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-heading {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #000;
+  position: relative;
+}
+
+/* Small accent line under heading */
+.footer-heading::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #fca00c;
+  margin-top: 4px;
+}
+
+.footer-link {
+  color: #444;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #0e926b;
+  padding-left: 5px; /* Subtle movement effect */
+}
+
+/* Right Section (Address) */
+.footer-address {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.footer-address p {
+  margin-bottom: 10px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background-color: #fca00c;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* 7. RESPONSIVE QUERIES */
+
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr; /* 2x2 grid on tablets */
+    gap: 50px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* Stack everything */
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .footer-logo-section, 
+  .social-icons,
+  .footer-heading::after {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .footer-heading::after {
+    margin: 4px auto 0 auto;
+  }
+
+  .footer-address {
+    max-width: 100%;
+  }
+
+  .footer-link:hover {
+    padding-left: 0; /* Disable movement on mobile */
+  }
+}

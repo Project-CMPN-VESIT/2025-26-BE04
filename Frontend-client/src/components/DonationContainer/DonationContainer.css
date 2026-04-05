@@ -1,0 +1,213 @@
+/* ===== DONATION CONTAINER SECTION ===== */
+.donation-container {
+  width: 100%;
+  max-width: 420px; /* Increased slightly for better desktop presence */
+  background: #ffffff;
+  border: 3px solid #00a884;
+  border-radius: 20px; /* Softer corners */
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 20px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.donation-container:hover {
+  transform: translateY(-5px);
+}
+
+.donation-image {
+  width: 100%;
+  height: clamp(200px, 30vh, 280px); /* Fluid height based on screen */
+  overflow: hidden;
+  position: relative;
+}
+
+.donation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.donation-container:hover .donation-image img {
+  transform: scale(1.05);
+}
+
+.donation-content {
+  padding: clamp(16px, 5vw, 24px); /* Smaller padding on small phones */
+}
+
+.donation-title {
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.donation-description {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Progress Bar Refinement */
+.progress-section {
+  margin-bottom: 24px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 28px; /* Slightly slimmer for elegance */
+  background: #f0f0f0;
+  border-radius: 50px; /* Fully rounded bar is more modern */
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00a884, #00cba0);
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  transition: width 1s cubic-bezier(0.1, 0, 0.1, 1); /* Smoother animation */
+}
+
+.progress-amount {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Stats Section Layout */
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Align to the bottom of the numbers */
+  margin-bottom: 24px;
+  gap: 10px;
+}
+
+.goal-percentage {
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  font-weight: 900;
+  color: #000;
+  line-height: 1;
+}
+
+.goal-label {
+  font-size: 0.85rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.goal-target {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Member Avatars - Stacking fix */
+.member-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.member-avatars {
+  display: flex;
+  flex-direction: row-reverse; /* Modern look */
+  justify-content: flex-end;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eee;
+  border: 2px solid #fff;
+  margin-right: -12px; /* Controlled overlap */
+  object-fit: cover;
+}
+
+.member-count {
+  font-size: 0.8rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Buttons - Professional Refactor */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.donate-button {
+  flex: 1;
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.2);
+}
+
+.donate-button:hover {
+  background: #f57c00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.3);
+}
+
+.share-button {
+  width: 50px;
+  height: 50px;
+  background: #00a884;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0; /* Prevents button from squashing */
+}
+
+.share-button:hover {
+  background: #008f6f;
+  transform: scale(1.1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 400px) {
+  .donation-container {
+    border-radius: 12px;
+    border-width: 2px;
+  }
+  
+  .action-buttons {
+    flex-direction: column; /* Optional: stack buttons on tiny screens */
+    gap: 10px;
+  }
+  
+  .share-button {
+    width: 100%; /* Full width share button on mobile */
+    border-radius: 50px;
+    height: 45px;
+  }
+  
+  .donate-button {
+    width: 100%;
+  }
+}

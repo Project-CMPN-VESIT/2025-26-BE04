@@ -1,0 +1,209 @@
+/* ---------- ROOT (Matching your theme) ---------- */
+:root {
+  --primary: #2b3674;
+  --primary-light: #3b4aa1;
+  --bg-light: #f4f6fb;
+  --white: #ffffff;
+}
+
+/* ---------- PAGE WRAPPER ---------- */
+.centre-details-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem;
+  background: var(--bg-light);
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+}
+
+.centre-details-page h1 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ---------- MAIN CARD ---------- */
+.centre-details-card {
+  width: 85%;
+  max-width: 900px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Split view for details */
+  gap: 1.5rem;
+}
+
+/* ---------- DETAIL PARAGRAPHS ---------- */
+.centre-details-card p {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background 0.2s ease;
+}
+
+.centre-details-card p:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.centre-details-card strong {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+/* ---------- CAPACITY BOX (FOOTER) ---------- */
+.capacity-box {
+  grid-column: span 2; /* Spans across both columns */
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: var(--primary-light);
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.capacity-box span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* ---------- MOBILE RESPONSIVENESS ---------- */
+@media (max-width: 768px) {
+  .centre-details-card {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .capacity-box {
+    grid-column: span 1;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .centre-details-page h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- BACK BUTTON ---------- */
+.back-btn {
+  align-self: flex-start;
+  margin-bottom: 1.8rem;
+  margin-left: 7.5%;
+  padding: 0.6rem 1.4rem;
+
+  background: var(--primary) !important;
+  color: var(--primary);
+
+  border: none;
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(43, 54, 116, 0.15);
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.back-btn:hover {
+  background: var(--primary-light);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(43, 54, 116, 0.25);
+}
+
+/* Active click */
+.back-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(43, 54, 116, 0.2);
+}
+
+/* ---------- MOBILE ADJUSTMENT ---------- */
+@media (max-width: 768px) {
+  .back-btn {
+    margin-left: 0;
+    align-self: center;
+  }
+}
+/* ---------- CHECK INVENTORY BUTTON ---------- */
+.check-inventory-btn {
+  grid-column: span 2; /* Spans both columns of the card */
+  margin-top: 1rem;
+  padding: 1rem;
+  
+  background: #ffffff; /* Contrast against the dark blue card */
+  color: var(--primary);
+  
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.check-inventory-btn:hover {
+  background: var(--bg-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.check-inventory-btn:active {
+  transform: translateY(0);
+}
+
+/* ---------- INVENTORY SLIDE-IN CONTAINER ---------- */
+.inventory-slide-in {
+  grid-column: span 2;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  animation: fadeInDown 0.4s ease-out;
+}
+
+/* Smooth entry animation for the inventory section */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- MOBILE ADJUSTMENT ---------- */
+@media (max-width: 768px) {
+  .check-inventory-btn, 
+  .inventory-slide-in {
+    grid-column: span 1; /* Adjust for single column mobile view */
+  }
+}

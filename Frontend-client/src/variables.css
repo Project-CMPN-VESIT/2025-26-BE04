@@ -1,0 +1,16 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monomaniac+One&family=Orelega+One&family=Outfit:wght@100..900&display=swap");
+/* Colors */
+
+:root {
+  --foreground: #000;
+  --foreground-inverted: #fff;
+  --background: #fff;
+  --accent-01: #0e926b;
+  --accent-01-dark: #0b7354;
+  --accent-01-light: #0e926a1f;
+  --accent-02: #fca00c;
+  --dark: #242424;
+  --grey: #e3e3e3;
+  --creme: #f5f5dc;
+}

@@ -1,0 +1,115 @@
+/* ===== WELCOME BANNER SECTION ===== */
+.welcome-banner-wrapper {
+  width: 100%;
+  /* Using fallback colors in case variables aren't loaded */
+  background-color: var(--accent-01, #0e926b); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 8px solid var(--accent-01-dark, #0b7555);
+  border-bottom: 8px solid var(--accent-01-dark, #0b7555);
+  
+  /* Responsive padding: smaller on mobile, larger on desktop */
+  padding: clamp(3rem, 10vw, 5rem) 1.5rem;
+  gap: 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  /* Background pattern remains the same */
+  background-image: url("data:image/svg+xml,..."); /* Keep your SVG string here */
+  background-attachment: fixed; /* Optional: adds a nice parallax-like feel */
+}
+
+.welcome-banner-title {
+  font-family: "Monomaniac One", sans-serif;
+  overflow: hidden;
+  /* Fluid font size: scales between 2rem and 3.5rem */
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--foreground-inverted, #ffffff);
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+.welcome-banner-desc {
+  /* Removed fixed min-width 700px */
+  width: 100%;
+  max-width: 750px; 
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--foreground-inverted, #ffffff);
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.welcome-banner-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Critical for mobile */
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.welcome-banner-button {
+  display: inline-block;
+  border-radius: 50px; /* Standard pill shape */
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  text-decoration: none;
+  /* Responsive button text */
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0.8rem 2.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Button Variants */
+.welcome-banner-button.get-involved-button {
+  color: var(--foreground-inverted, #ffffff) !important;
+  background-color: var(--dark, #1a1a1a);
+}
+
+.welcome-banner-button.get-involved-button:hover {
+  border: 2px solid var(--accent-02, #ff9545) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.welcome-banner-button.donate-now-button {
+  color: var(--accent-01, #0e926b) !important;
+  background-color: var(--foreground-inverted, #ffffff);
+  border: 2px solid var(--accent-02, #ff9545) !important;
+}
+
+.welcome-banner-button.donate-now-button:hover {
+  background-color: var(--accent-02, #ff9545);
+  color: #ffffff !important;
+  border: 2px solid var(--foreground-inverted, #ffffff) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* 7. RESPONSIVE QUERIES */
+
+@media (max-width: 768px) {
+  .welcome-banner-wrapper {
+    padding: 3.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .welcome-banner-buttons {
+    flex-direction: column; /* Stack buttons on phones */
+    width: 100%;
+    max-width: 300px; /* Keeps stacked buttons a nice width */
+  }
+
+  .welcome-banner-button {
+    width: 100%; /* Buttons take full width of container when stacked */
+  }
+}
