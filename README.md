@@ -8,21 +8,22 @@
 
 ## 👥 Team — Group D17C / 04
 
-| Name | Roll No | GitHub |
-|------|---------|--------|
-| Chinmay Desai | D17C / 16 | [@chinmaydesai](https://github.com) |
-| Yash Ingale | D17C / 29 | [@yashingale2004](https://github.com/yashingale2004) |
-| Gautam Rai | D17C / 53 | [@gautamrai](https://github.com) |
-| Shaanveer Singh | D17C / 61 | [@shaanveersingh](https://github.com) |
+| Name            | Roll No   | GitHub                                               |
+| --------------- | --------- | ---------------------------------------------------- |
+| Chinmay Desai   | D17C / 16 | [@chinmaydesai](https://github.com/ChinmayDesai2005) |
+| Yash Ingale     | D17C / 29 | [@yashingale2004](https://github.com/yashingale2004) |
+| Gautam Rai      | D17C / 53 | [@gautamrai](https://github.com/Gautam-04)           |
+| Shaanveer Singh | D17C / 61 | [@shaanveersingh](https://github.com/ShaanVeer21)    |
 
-**Project Mentor:** Prof. Dr. Mrs. Gresha Bhatia
-**Industry Collaborator:** Jeevan Samvardhan Foundation, Mumbai
+**Project Mentor:** **Prof. Dr. Mrs. Gresha Bhatia**
+
+**Industry Collaborator:** **Ms. Sujata Angadi** Jeevan Samvardhan Foundation, Mumbai
 
 ---
 
 ## 📌 About JeevanSetu
 
-**JeevanSetu** (meaning *"Bridge of Life"*) is a high-performance, full-stack digital platform designed to modernize and unify the operations of Non-Governmental Organizations (NGOs). Developed in direct collaboration with the **Jeevan Samvardhan Foundation** — a child welfare NGO dedicated to the rehabilitation and education of underprivileged children in Mumbai — the platform addresses the chronic inefficiencies caused by manual record-keeping, fragmented tools, and a lack of transparency in the non-profit sector.
+**JeevanSetu** (meaning _"Bridge of Life"_) is a high-performance, full-stack digital platform designed to modernize and unify the operations of Non-Governmental Organizations (NGOs). Developed in direct collaboration with the **Jeevan Samvardhan Foundation** — a child welfare NGO dedicated to the rehabilitation and education of underprivileged children in Mumbai — the platform addresses the chronic inefficiencies caused by manual record-keeping, fragmented tools, and a lack of transparency in the non-profit sector.
 
 The platform serves as a **single source of truth** for NGO operations, replacing error-prone paperwork and disconnected spreadsheets with automated, data-driven workflows that are transparent, secure, and scalable.
 
@@ -47,15 +48,19 @@ This leads to donor distrust, administrative bottlenecks, and an inability to sc
 JeevanSetu introduces a **unified web-based ecosystem** built on four pillars:
 
 ### 🔗 1. Blockchain-Backed Donation Transparency
+
 Every donation is automatically recorded on an **Ethereum blockchain ledger** via Solidity smart contracts. This creates an immutable, tamper-proof trail of fund movement — donors can verify exactly when and how their contribution was logged, rebuilding the trust bridge between NGOs and their supporters.
 
 ### 📊 2. Real-Time Analytics Dashboards
+
 Fragmented data from donors, campaigns, and volunteers is consolidated into **interactive dashboards** powered by a Flask microservice. NGO leadership can monitor KPIs, track campaign velocity, and make informed decisions in real time.
 
 ### 💳 3. Integrated Donation Processing
+
 Seamless online donations via **Razorpay** supporting UPI, Cards, Net Banking, and Wallets. Instant digital receipts are generated automatically, eliminating manual acknowledgement.
 
 ### 🛡️ 4. Centralized & Secure Data Management
+
 All organizational, financial, and beneficiary records are stored in a **single MongoDB repository** with Role-Based Access Control (RBAC), ensuring sensitive data is only accessible by authorized personnel.
 
 ---
@@ -125,77 +130,86 @@ All organizational, financial, and beneficiary records are stored in a **single 
 ## 🛠️ Tech Stack
 
 ### Frontend
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| ReactJS | v19.1.1 | Component-based UI framework |
-| Material UI (MUI) | v7.3.2 | UI component library & theming |
-| Vite | Latest | Build tool & dev server |
-| React Router | Latest | Client-side routing |
+
+| Technology        | Version | Purpose                        |
+| ----------------- | ------- | ------------------------------ |
+| ReactJS           | v19.1.1 | Component-based UI framework   |
+| Material UI (MUI) | v7.3.2  | UI component library & theming |
+| Vite              | Latest  | Build tool & dev server        |
+| React Router      | Latest  | Client-side routing            |
 
 ### Backend
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| Node.js | v24.8.0 | Main application server |
-| Express | v5.1.0 | REST API framework |
-| Flask | v3.1.2 | Python analytics microservice |
-| JWT | Latest | Authentication tokens |
+
+| Technology | Version | Purpose                       |
+| ---------- | ------- | ----------------------------- |
+| Node.js    | v24.8.0 | Main application server       |
+| Express    | v5.1.0  | REST API framework            |
+| Flask      | v3.1.2  | Python analytics microservice |
+| JWT        | Latest  | Authentication tokens         |
 
 ### Database & Storage
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| MongoDB | v8.0 | Primary NoSQL database |
-| Mongoose | Latest | ODM for MongoDB |
+
+| Technology | Version | Purpose                |
+| ---------- | ------- | ---------------------- |
+| MongoDB    | v8.0    | Primary NoSQL database |
+| Mongoose   | Latest  | ODM for MongoDB        |
 
 ### Blockchain
-| Technology | Version | Purpose |
-|-----------|---------|---------|
+
+| Technology          | Version | Purpose                               |
+| ------------------- | ------- | ------------------------------------- |
 | Ethereum (Solidity) | v0.8.30 | Smart contracts for donation tracking |
-| Hyperledger Fabric | v3.1.1 | Permissioned consortium blockchain |
-| Ganache | v7.9.2 | Local Ethereum test environment |
+| Hyperledger Fabric  | v3.1.1  | Permissioned consortium blockchain    |
+| Ganache             | v7.9.2  | Local Ethereum test environment       |
 
 ### Payments & APIs
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| Razorpay Node SDK | v2.9.6 | Payment gateway |
-| Claude API | Latest | AI-powered inventory analysis |
-| Google Maps API | Latest | Location-based services |
+
+| Technology        | Version | Purpose                       |
+| ----------------- | ------- | ----------------------------- |
+| Razorpay Node SDK | v2.9.6  | Payment gateway               |
+| Claude API        | Latest  | AI-powered inventory analysis |
+| Google Maps API   | Latest  | Location-based services       |
 
 ### DevTools
-| Tool | Version | Purpose |
-|------|---------|---------|
-| Git & GitHub | v2.47.1 | Version control |
-| Postman | v11.45.0 | API testing & debugging |
-| Figma | v124.6.8 | UI/UX design & prototyping |
-| Canva | Web | Presentation & graphic design |
+
+| Tool         | Version  | Purpose                       |
+| ------------ | -------- | ----------------------------- |
+| Git & GitHub | v2.47.1  | Version control               |
+| Postman      | v11.45.0 | API testing & debugging       |
+| Figma        | v124.6.8 | UI/UX design & prototyping    |
+| Canva        | Web      | Presentation & graphic design |
 
 ---
 
 ## ⚡ Performance Results
 
 ### Lighthouse Audit Scores
-| Metric | Score |
-|--------|-------|
-| 🟢 Performance | **98 / 100** |
+
+| Metric            | Score         |
+| ----------------- | ------------- |
+| 🟢 Performance    | **98 / 100**  |
 | 🟢 Best Practices | **100 / 100** |
-| 🟠 Accessibility | **89 / 100** |
-| 🟠 SEO | **83 / 100** |
+| 🟠 Accessibility  | **89 / 100**  |
+| 🟠 SEO            | **83 / 100**  |
 
 ### Core Web Vitals
-| Metric | Value |
-|--------|-------|
-| First Contentful Paint (FCP) | **0.9 s** |
+
+| Metric                         | Value     |
+| ------------------------------ | --------- |
+| First Contentful Paint (FCP)   | **0.9 s** |
 | Largest Contentful Paint (LCP) | **0.9 s** |
-| Total Blocking Time (TBT) | **0 ms** |
-| Cumulative Layout Shift (CLS) | **0.004** |
-| Speed Index | **0.9 s** |
+| Total Blocking Time (TBT)      | **0 ms**  |
+| Cumulative Layout Shift (CLS)  | **0.004** |
+| Speed Index                    | **0.9 s** |
 
 ### System Accuracy
-| Test | Result |
-|------|--------|
-| Blockchain–MongoDB consistency | 100% |
+
+| Test                                    | Result          |
+| --------------------------------------- | --------------- |
+| Blockchain–MongoDB consistency          | 100%            |
 | Error-free transactions (500 simulated) | Zero duplicates |
-| Analytics reporting accuracy | 99.4% |
-| Accuracy under peak load | > 99% |
+| Analytics reporting accuracy            | 99.4%           |
+| Accuracy under peak load                | > 99%           |
 
 ---
 
@@ -231,6 +245,7 @@ All organizational, financial, and beneficiary records are stored in a **single 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js v18+
 - Python 3.10+
 - MongoDB (local or Atlas)
@@ -238,12 +253,14 @@ All organizational, financial, and beneficiary records are stored in a **single 
 - Git
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/Project-CMPN-VESIT/2025-26-BE04.git
 cd 2025-26-BE04/JeevanSetu
 ```
 
 ### 2. Setup Frontend (Client)
+
 ```bash
 cd Frontend-client
 npm install
@@ -251,6 +268,7 @@ npm run dev
 ```
 
 ### 3. Setup Frontend (Admin)
+
 ```bash
 cd ../frontend-admin
 npm install
@@ -258,12 +276,14 @@ npm run dev
 ```
 
 ### 4. Setup Backend (Node.js)
+
 ```bash
 cd ../backend
 npm install
 ```
 
 Create a `.env` file in the `backend/` folder:
+
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
@@ -277,6 +297,7 @@ node server.js
 ```
 
 ### 5. Setup Flask Microservice
+
 ```bash
 cd ../deploy-backend-1
 pip install -r requirements.txt
@@ -284,6 +305,7 @@ python app.py
 ```
 
 ### 6. Start Ganache (Blockchain)
+
 - Open Ganache desktop app
 - Create a new workspace
 - Connect to `HTTP://127.0.0.1:7545`
@@ -292,18 +314,18 @@ python app.py
 
 ## 📱 Screenshots
 
-| Page | Description |
-|------|-------------|
-| 🏠 Home Page | Hero banner with mission statement and Donate Now CTA |
-| ℹ️ About Us | Foundation mission, vision, and story |
-| 📰 News | Press coverage and NGO lead interviews |
-| 💰 Campaigns | Featured fundraisers with progress indicators |
-| 💳 Donation Checkout | Razorpay-integrated payment form |
-| ✅ Payment Success | Razorpay confirmation screen |
-| ⛓️ Blockchain Log | Ganache transaction hash verification |
-| 🖥️ Admin Portal | Campaign management dashboard |
-| ➕ Create Fundraiser | Admin form to launch new campaigns |
-| 📈 Donation Analytics | Timeline charts + blockchain transaction table |
+| Page                  | Description                                           |
+| --------------------- | ----------------------------------------------------- |
+| 🏠 Home Page          | Hero banner with mission statement and Donate Now CTA |
+| ℹ️ About Us           | Foundation mission, vision, and story                 |
+| 📰 News               | Press coverage and NGO lead interviews                |
+| 💰 Campaigns          | Featured fundraisers with progress indicators         |
+| 💳 Donation Checkout  | Razorpay-integrated payment form                      |
+| ✅ Payment Success    | Razorpay confirmation screen                          |
+| ⛓️ Blockchain Log     | Ganache transaction hash verification                 |
+| 🖥️ Admin Portal       | Campaign management dashboard                         |
+| ➕ Create Fundraiser  | Admin form to launch new campaigns                    |
+| 📈 Donation Analytics | Timeline charts + blockchain transaction table        |
 
 ---
 
@@ -311,12 +333,12 @@ python app.py
 
 This project directly contributes to the **United Nations Sustainable Development Goals**:
 
-| SDG | Goal | How JeevanSetu Contributes |
-|-----|------|---------------------------|
-| 🟠 Goal 1 | No Poverty | Supports child welfare and rehabilitation NGOs |
-| 🔵 Goal 4 | Quality Education | Funds education campaigns for underprivileged children |
-| ⚪ Goal 16 | Peace, Justice & Strong Institutions | Blockchain transparency builds accountable institutions |
-| 🟢 Goal 17 | Partnerships for the Goals | Industry collaboration with Jeevan Samvardhan Foundation |
+| SDG        | Goal                                 | How JeevanSetu Contributes                               |
+| ---------- | ------------------------------------ | -------------------------------------------------------- |
+| 🟠 Goal 1  | No Poverty                           | Supports child welfare and rehabilitation NGOs           |
+| 🔵 Goal 4  | Quality Education                    | Funds education campaigns for underprivileged children   |
+| ⚪ Goal 16 | Peace, Justice & Strong Institutions | Blockchain transparency builds accountable institutions  |
+| 🟢 Goal 17 | Partnerships for the Goals           | Industry collaboration with Jeevan Samvardhan Foundation |
 
 ---
 
@@ -324,11 +346,11 @@ This project directly contributes to the **United Nations Sustainable Developmen
 
 This project is grounded in 20 peer-reviewed research papers, key ones include:
 
-1. Nairi et al. — *"Smart Blockchain Networks: Revolutionizing Donation Tracking in Web 3.0"* — Computer Communications, 2024
-2. Borade et al. — *"NGO and Donor Management System Using Charity Blockchain"* — IJIRMPS, 2024
-3. Ata et al. — *"A Dynamic Model for Managing Volunteer Engagement"* — arXiv, 2023
-4. Shi et al. — *"Artificial Intelligence for Social Good: A Survey"* — arXiv, 2020
-5. Dash & Mishra — *"Critical Considerations for Developing MIS for NGOs"* — arXiv, 2014
+1. Nairi et al. — _"Smart Blockchain Networks: Revolutionizing Donation Tracking in Web 3.0"_ — Computer Communications, 2024
+2. Borade et al. — _"NGO and Donor Management System Using Charity Blockchain"_ — IJIRMPS, 2024
+3. Ata et al. — _"A Dynamic Model for Managing Volunteer Engagement"_ — arXiv, 2023
+4. Shi et al. — _"Artificial Intelligence for Social Good: A Survey"_ — arXiv, 2020
+5. Dash & Mishra — _"Critical Considerations for Developing MIS for NGOs"_ — arXiv, 2014
 
 ---
 
@@ -355,10 +377,10 @@ This project is grounded in 20 peer-reviewed research papers, key ones include:
 
 ## 📄 Project Documents
 
-| Document | Location |
-|---------|---------|
-| Final Blackbook (Sem 8) | [`Sem 8/Final_BE_Project_BlackBook.pdf`](./Sem%208/Final_BE_Project_BlackBook.pdf) |
-| Sem 7 Report | [`Sem 7/`](./Sem%207/) |
+| Document                | Location                                                                         |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| Final Blackbook (Sem 8) | [`Sem-8/04_GB_JeevanSetu_BlackBook.pdf`](./Sem-8/04_GB_JeevanSetu_BlackBook.pdf) |
+| Sem 7 Report            | [`Sem 7/`](./Sem-07/)                                                            |
 
 ---
 
@@ -374,7 +396,7 @@ All code and documentation is submitted for academic evaluation purposes.
 
 **Made with ❤️ for social impact | VESIT, Mumbai | 2025-26**
 
-*"We change the lives of those who have no hope."*
-*— Jeevan Samvardhan Foundation*
+_"We change the lives of those who have no hope."_
+_— Jeevan Samvardhan Foundation_
 
 </div>
