@@ -380,7 +380,7 @@ This project is grounded in 20 peer-reviewed research papers, key ones include:
 | Document                | Location                                                                         |
 | ----------------------- | -------------------------------------------------------------------------------- |
 | Final Blackbook (Sem 8) | [`Sem-8/04_GB_JeevanSetu_BlackBook.pdf`](./Sem-8/04_GB_JeevanSetu_BlackBook.pdf) |
-| Sem 7 Report            | [`Sem 7/`](./Sem-07/)                                                            |
+| Sem 7 Report            | [`Sem-7/`](./Sem-07/)                                                            |
 
 ---
 
